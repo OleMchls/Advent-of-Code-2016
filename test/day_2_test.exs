@@ -21,4 +21,15 @@ defmodule Aoc.DayTwoTest do
 
     assert DayTwo.access_code(instructions) == 1985
   end
+
+  test "full instruction set on complex map" do
+    instructions = """
+    ULL
+    RRDDD
+    LURDL
+    UUUUD
+    """
+
+    assert DayTwo.complex_access_code(instructions) == "5DB3"
+  end
 end
