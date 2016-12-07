@@ -26,5 +26,11 @@ defmodule Mix.Tasks.AdventOfCode do
     |> Aoc.DayTwo.complex_access_code
   end
 
+  defp execute_day(3) do
+    Path.expand("lib/day_3.in")
+    |> File.read!
+    |> Aoc.DayThree.possible_triangles
+  end
+
   defp execute_day(n), do: IO.warn("Day #{n} not implemented!")
 end
