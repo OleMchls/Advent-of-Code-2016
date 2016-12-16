@@ -32,5 +32,11 @@ defmodule Mix.Tasks.AdventOfCode do
     |> Aoc.DayThree.possible_triangles
   end
 
+  defp execute_day(4) do
+    Path.expand("lib/day_4.in")
+    |> File.read!
+    |> Aoc.DayFour.decrypt
+  end
+
   defp execute_day(n), do: IO.warn("Day #{n} not implemented!")
 end
